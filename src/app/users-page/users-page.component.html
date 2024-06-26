@@ -1,0 +1,22 @@
+<p>users-page works!</p>
+<p *ngIf="usersList.length==0">NoUsers are present</p>
+<table *ngIf="usersList.length>0">
+    <thead>
+        <tr>
+            <td>s.no</td>
+            <td>name</td>
+            <td>email</td>
+            
+        </tr>
+        
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of usersList;index as i">
+            <td>{{i}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.email}}</td>
+            
+        </tr>
+    </tbody>
+</table>
+

@@ -1,0 +1,9 @@
+<p>register-page works!</p>
+<form class="form-group" [formGroup]="registerForm" (ngSubmit)="handleSubmit()">
+    <input name="name" type="text" formControlName="name" placeholder="name">
+    <input name="email" type="email" formControlName="email" placeholder="Email">
+    <input type="password" formControlName="password" placeholder="Password">
+    <input type="password" formControlName="re_password" placeholder="re-enter-Password">
+    <button>Submit</button>
+</form>
+
