@@ -11,7 +11,7 @@ import { NgFor, NgIf } from '@angular/common';
   styleUrl: './users-page.component.css'
 })
 export class UsersPageComponent implements OnInit{
-  index:number=0
+ 
   allUsers=inject(AllusersService)
   
   usersList:any=[]

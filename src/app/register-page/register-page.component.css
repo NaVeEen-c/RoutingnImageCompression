@@ -1,0 +1,28 @@
+form{
+   
+   
+    width: 30%;
+    gap:10px;
+    margin: auto;
+    background-color: rgb(216, 226, 216);
+    padding: 20px;
+    border-radius: 10px;
+}
+input{
+    padding: 5px 20px;
+   
+    border-radius: 5px;
+    margin: 10px;
+
+}
+div{
+    width: 100%;
+    text-align: center;
+    margin: 10px 0px;
+    gap: 5px;
+    
+}
+p{
+    text-align: center;
+    color: red;
+}

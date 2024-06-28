@@ -1,9 +1,48 @@
-<p>register-page works!</p>
+
+
 <form class="form-group" [formGroup]="registerForm" (ngSubmit)="handleSubmit()">
-    <input name="name" type="text" formControlName="name" placeholder="name">
-    <input name="email" type="email" formControlName="email" placeholder="Email">
-    <input type="password" formControlName="password" placeholder="Password">
-    <input type="password" formControlName="re_password" placeholder="re-enter-Password">
-    <button>Submit</button>
+    <div>
+    <input name="name" type="text" formControlName="name" placeholder="name" autocomplete="off"><br>
+    <input name="email" type="email" formControlName="email" placeholder="Email"><br>
+    <input type="password" formControlName="password" placeholder="Password"><br>
+    <input type="password" formControlName="re_password" placeholder="re-enter-Password"><br>
+    </div>
+    <div>
+      <span>Gender</span>
+      <label>
+        <input type="radio" formControlName="gender" value="Male"> Male
+      </label>
+      <label>
+        <input type="radio" formControlName="gender" value="Female"> Female
+      </label>
+    </div>
+    <div>
+      <label for="options">Choose profession</label>
+      <select id="options" name="selectedOption" formControlName="profession">
+        <option value="doctor">doctor</option>
+        <option value="engineer">engineer</option>
+        <option value="architect">architect</option>
+      </select>
+    </div>
+      <div>
+        <label for="textarea">Enter your adress</label><br>
+        <textarea id="textarea" formControlName="address" rows="4" cols="30" autocomplete="off"></textarea>
+      </div>
+  <div>
+    <input type='file' (change)="fileChange($event)" formControlName="avatar"/>
+    <!-- <button type="button" >upload</button> -->
+  </div>
+  <div>
+    <button [disabled]="registerForm.invalid">Submit</button>
+  </div>
+  
+    
+
 </form>
+<p *ngIf="newUser===0">user already existed</p>
+
+
+
+
+
 

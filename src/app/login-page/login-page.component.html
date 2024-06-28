@@ -1,8 +1,22 @@
-<h1 *ngIf="userexists===2">Welcome{{loggedUser}}</h1>
-<form class="form" [formGroup]="loginForm" (ngSubmit)="handleSubmit()" *ngIf="userexists!==2">
-    <input name="email" type="email" formControlName="email" placeholder="Email">
-    <input type="password" formControlName="password" placeholder="Password">
-    <button>Submit</button>
+<div *ngIf="userexists===1" class="user">
+    <h1>welcome {{loggedUser.name}}</h1>
+    <img [src]="loggedUser.avatar">
+    <div>
+    <ul>
+        <li>Gender:{{"  "+loggedUser.gender}}</li>
+        <li>Profession:{{loggedUser.profession}}</li>
+        <li>Adress:{{"  "+loggedUser.address}}</li>
+        
+    </ul>
+</div>
+</div>
+<form class="form" [formGroup]="loginForm" (ngSubmit)="handleSubmit()" *ngIf="userexists!==1 ">
+    
+    <input name="email" type="email" formControlName="email" placeholder="Email"><br>
+    <input type="password" formControlName="password" placeholder="Password"><br>
+    <button [disabled]="loginForm.invalid">Submit</button>
+
 </form>
-<p *ngIf="userexists===3">enter correct email and password or register</p>
+<p *ngIf="userexists===2">Wrong Password</p>
+<p *ngIf="userexists===3">no users exists, register</p>
 

@@ -1,0 +1,27 @@
+img{
+    width: 100px;
+    width: 100px;
+}
+table{
+font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+  margin: auto;
+}
+thead,td{
+    border: 1px solid #688031;
+    padding: 8px;
+}
+
+thead{
+    padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+p{
+    text-align: center;
+    color: red;
+}
+
